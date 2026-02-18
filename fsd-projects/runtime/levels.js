@@ -3,11 +3,15 @@
 const LEVELS = [
   {
     name: "Level 1",
-    speed: 2,
+    speed: 5,
     gameObjects: [
-      { type: "obstacle", kind: "spikes", x: 1600, y: groundY },
-      { type: "enemy", kind: "bug", x: 1600, y: groundY },
-      { type: "powerup", kind: "healthUp", x: 1600, y: groundY - 50 },
+      { type: "obstacle", kind: "spikes", x: 800, y: groundY },
+      { type: "enemy", kind: "bug", x: 1600, y: groundY, contactHealthChange: -20},
+      { type: "enemy", kind: "bug", x: 1610, y: groundY, contactHealthChange: -20 },
+      { type: "enemy", kind: "bug", x: 1640, y: groundY, contactHealthChange: -20 },
+      { type: "enemy", kind: "bug", x: 1680, y: groundY, contactHealthChange: -20 },
+      { type: "enemy", kind: "bug", x: 1720, y: groundY, contactHealthChange: -20 },
+      { type: "powerup", kind: "healthUp", x: 1000, y: 200 },
       {
         type: "platform",
         kind: "basicPlatform",
@@ -109,7 +113,7 @@ const DEFAULT_VALUES = {
       contactScoreChange: 0,
       projectileHealthChange: 0,
       projectileScoreChange: 50,
-      hp: 3,
+      hp: 1,
       collect: false,
     },
   },
