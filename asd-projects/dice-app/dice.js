@@ -1,29 +1,28 @@
 $(document).ready(function () {
   // Your code goes here
   $("<div>")
-  .css("height", 15)
-  .css("width", 15)
-  .css("background-color", "black")
-  .css("position", "absolute")
-  .css("top", 42)
-  .css("left", 42)
-  .appendTo("#die");
-
+    .css("height", 15)
+    .css("width", 15)
+    .css("background-color", "black")
+    .css("position", "absolute")
+    .css("top", 42)
+    .css("left", 42)
+    .appendTo("#die");
 });
 
-function makeDot(top, left, elementID) {$("<div>")
-  .css("height", 15)
-  .css("width", 15)
-  .css("background-color", "black")
-  .css("position", "absolute")
-  .css("top", top)
-  .css("left", left)
-  .appendTo(elementID);
-
+function makeDot(top, left, elementID) {
+  $("<div>")
+    .css("height", 15)
+    .css("width", 15)
+    .css("background-color", "black")
+    .css("position", "absolute")
+    .css("top", top)
+    .css("left", left)
+    .appendTo(elementID);
 }
 
 function rollDie(dieID) {
-  $(dieID).empty()
+  $(dieID).empty();
   var randomNum = Math.ceil(Math.random() * 6);
   if (randomNum === 1) {
     makeDot(50, 50, dieID); // middle middle
@@ -47,15 +46,15 @@ function rollDie(dieID) {
     makeDot(75, 25, dieID); // top right
   } else if (randomNum === 6) {
     makeDot(75, 75, dieID); // bottom right
-    makeDot(50, 75, dieID)
-    makeDot(50, 25, dieID)
+    makeDot(50, 75, dieID);
+    makeDot(50, 25, dieID);
     makeDot(25, 25, dieID); // top left
     makeDot(25, 75, dieID); // bottom left
     makeDot(75, 25, dieID); // top right
   }
 }
 function handleClick() {
-  rollDie('#die')
+  rollDie("#die");
 }
 
-$('#die').on('click', handleClick)
+$("#die").on("click", handleClick);
