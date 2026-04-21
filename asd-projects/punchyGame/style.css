@@ -1,0 +1,29 @@
+* {
+    cursor: none
+}
+#clickArea {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 215;
+    left: 546;
+
+}
+#cursorNorm {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%)
+}
+#cursorHov {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%)
+}
